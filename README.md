@@ -15,7 +15,7 @@ Data Mining process that uses historical patterns of unit clearance to identify 
 The scripts in this repository can be used to reproduce the results discussed in the MIS581 Capstone Project write up and final presentation. The repository contains the following: 
 
 * _MIS581_Capstone_Project_ad_unit_data.csv.zip_
-** This is the data set used in the research project. The data is stored in a compress .csv file. Provided below is a data dictionary for the data set. 
+  * This is the data set used in the research project. The data is stored in a compress .csv file. Provided below is a data dictionary for the data set. 
 
 | Variable Name | Data Type | Description | 
 |-|-|-|
@@ -33,11 +33,11 @@ The scripts in this repository can be used to reproduce the results discussed in
 | avails | Integer (Count)  | Total number of available 30-second ad slots for preemptable buyers in the week the unit is booked against |
 
 * _MIS581 Capstone Project.sas_
-** This .sas file is the code used to perform descriptive statistics on the ad unit data set. This file also contains the code used to perform the T-Test and the Correlation Analysis. 
+  * This .sas file is the code used to perform descriptive statistics on the ad unit data set. This file also contains the code used to perform the T-Test and the Correlation Analysis. 
 * _MIS581 Capstone Project Predictive.py_
-** This Python script is the code used to develop the predicitve models of in the research project. The script creates both a logistic regression and a decsion tree model.
+  * This Python script is the code used to develop the predicitve models of in the research project. The script creates both a logistic regression and a decsion tree model.
 * _MIS581 Capstone Project Model Results.twbx_
-** This Tableau workbook was used to create the Confusion Matrix and ROC Curves for the research project. 
+  * This Tableau workbook was used to create the Confusion Matrix and ROC Curves for the research project. 
 
 ## Requirements
 
