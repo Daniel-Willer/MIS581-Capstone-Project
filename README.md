@@ -1,10 +1,7 @@
 # MIS581 Capstone Project: Predicting Aired Status of Preemptable Advertising Units
 
-This repository hosts the code and visualizations used in the CSU Global MIS581 Capstone Project. This project's research question was “What is the relationship between the aired/preempted status of non-guaranteed preemptable ads and key variables including unit rate, available inventory, and aggregate rates of previously aired ads?” The code and visualizations in this repository attempt to answer this research question using descriptive analytics, a T-Test, a Correlation Analysis, and Predictive Analytics. 
-
 ## Overview
-
-Data Mining process that uses historical patterns of unit clearance to identify performance spots at risk of preemption. The process uses 30 days of unit level clearance data to train a decision tree model. Production data for all DR and Unwired spots booked for this week and beyond are run through decision tree model to predict if the spots will air. The model features include spot level metrics, aggregated clearance metrics, and avails. 
+This repository hosts the code and visualizations used in the CSU Global MIS581 Capstone Project. This project's research question was “What is the relationship between the aired/preempted status of non-guaranteed preemptable ads and key variables including unit rate, available inventory, and aggregate rates of previously aired ads?” The code and visualizations in this repository attempt to answer this research question using descriptive analytics, a T-Test, a Correlation Analysis, and Predictive Analytics. 
 
 ## Usage
 
