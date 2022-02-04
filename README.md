@@ -5,7 +5,7 @@ This repository hosts the code and visualizations used in the CSU Global MIS581 
 
 ## Usage
 
-The scripts in this repository can be used to reproduce the results discussed in the MIS581 Capstone Project write up and final presentation. The repository contains the following: 
+The scripts in this repository can be used to reproduce the results discussed in the MIS581 Capstone Project write up and final presentation. The repository contains 2 folders app and data. The app folder contains the SAS & Python code used in the project and the data folder contains the compressed .csv data file for the project. Each file in the repo are described below:
 
 * _MIS581_Capstone_Project_ad_unit_data.csv.zip_
   * This is the data set used in the research project. The data is stored in a compress .csv file. Provided below is a data dictionary for the data set. 
