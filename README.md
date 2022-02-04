@@ -6,10 +6,6 @@ This repository hosts the code and visualizations used in the CSU Global MIS581 
 
 Data Mining process that uses historical patterns of unit clearance to identify performance spots at risk of preemption. The process uses 30 days of unit level clearance data to train a decision tree model. Production data for all DR and Unwired spots booked for this week and beyond are run through decision tree model to predict if the spots will air. The model features include spot level metrics, aggregated clearance metrics, and avails. 
 
-## Process Diagram
-
-![](assets/Perforamance_Clearance_Data_Mining.jpg)
-
 ## Usage
 
 The scripts in this repository can be used to reproduce the results discussed in the MIS581 Capstone Project write up and final presentation. The repository contains the following: 
