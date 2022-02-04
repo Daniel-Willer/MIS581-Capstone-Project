@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[22]:
-
-
 import pandas as pd
 import datetime
 import os
@@ -20,39 +17,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 get_ipython().run_line_magic('matplotlib', 'inline')
 
-
-# In[ ]:
-
-
-
-
-
-# In[23]:
-
-
 df = pd.read_csv('/Users/danielwiller/Documents/CSU/MIS581/MIS581 Capstone Project/MIS581_Capstone_Project_ad_unit_data.csv')
-
-
-# In[24]:
-
-
-df
-
-
-# In[25]:
-
 
 today_str = datetime.datetime.today().strftime('%Y-%m-%d')
 
-
-# In[26]:
-
-
 list(df.columns)
-
-
-# In[27]:
-
 
 # Create features and target variables
 feature_cols = ['grss_bkd_amt', 'network_code', 'dy_prt_id', 'inv_lnth_in_sec'
@@ -61,16 +30,8 @@ feature_cols = ['grss_bkd_amt', 'network_code', 'dy_prt_id', 'inv_lnth_in_sec'
 X = df[feature_cols] # Features
 y = df.aird_ind # Target variable
 
-
-# In[28]:
-
-
 # Partition Data into traing and validation sets
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.25,random_state=0)
-
-
-# In[29]:
-
 
 # Use Logistic Regression to predict aired status 
 # instantiate the model (using the default parameters)
@@ -91,16 +52,11 @@ y_pred_proba = logreg.predict_proba(X_test)[::,1]
 fpr, tpr, _ = metrics.roc_curve(y_test,  y_pred_proba)
 auc = metrics.roc_auc_score(y_test, y_pred_proba)
 
-
 print("\nModel Performance:")
 print("Accuracy:",accuracy)
 print("Precision:",precision)
 print("Recall:",recall)
 print("AUC:",auc)
-
-
-# In[30]:
-
 
 #Heat Map Confusion Matrix
 class_names=[0,1] # name  of classes
@@ -116,10 +72,6 @@ plt.title('Confusion matrix', y=1.1)
 plt.ylabel('Actual label')
 plt.xlabel('Predicted label')
 
-
-# In[31]:
-
-
 # Write data to .csv for use in Tableau
 tn = cnf_matrix[0, 0]
 fn = cnf_matrix[0, 1]
@@ -132,11 +84,6 @@ measure_vals_df = pd.DataFrame.from_dict(measure_vals, orient='columns')
 
 roc_curve_df.to_excel('/Users/danielwiller/Documents/CSU/MIS581/MIS581 Capstone Project/lr_roc_curve.xlsx')
 measure_vals_df.to_excel('/Users/danielwiller/Documents/CSU/MIS581/MIS581 Capstone Project/lr_metics.xlsx')
-
-
-# In[32]:
-
-
 
 # Create Decision Tree classifer object
 clf = DecisionTreeClassifier()
@@ -158,16 +105,11 @@ auc = metrics.roc_auc_score(y_test, y_pred_proba)
 cnf_matrix = metrics.confusion_matrix(y_test, y_pred)
 print(cnf_matrix)
 
-
 print("Model Performance:")
 print("Accuracy:",accuracy)
 print("Precision:",precision)
 print("Recall:",recall)
 print("AUC:",auc)
-
-
-# In[33]:
-
 
 #Heat Map Confusion Matrix
 class_names=[0,1] # name  of classes
@@ -183,10 +125,6 @@ plt.title('Confusion matrix', y=1.1)
 plt.ylabel('Actual label')
 plt.xlabel('Predicted label')
 
-
-# In[34]:
-
-
 # Write data to .csv for use in Tableau
 tn = cnf_matrix[0, 0]
 fn = cnf_matrix[0, 1]
@@ -199,16 +137,3 @@ measure_vals_df = pd.DataFrame.from_dict(measure_vals, orient='columns')
 
 roc_curve_df.to_excel('/Users/danielwiller/Documents/CSU/MIS581/MIS581 Capstone Project/dt_roc_curve.xlsx')
 measure_vals_df.to_excel('/Users/danielwiller/Documents/CSU/MIS581/MIS581 Capstone Project/dt_metics.xlsx')
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
